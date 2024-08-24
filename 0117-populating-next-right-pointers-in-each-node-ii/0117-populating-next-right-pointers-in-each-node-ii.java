@@ -30,8 +30,8 @@ class Solution {
             int n=q.size();
             Node prev=null;
             for(int i=0;i<n;i++){
-                Node top=q.peek();
-                q.poll();
+                Node top=q.poll();
+                
                 top.next=prev;
                 prev=top;
                 if(top.right!=null) q.add(top.right);
