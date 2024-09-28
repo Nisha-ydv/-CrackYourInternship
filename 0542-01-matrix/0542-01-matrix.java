@@ -1,6 +1,6 @@
 class Solution {
     int m, n;
-    int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    int[][] directions = {{-1, 0,1,0}, {0,1,0,-1}};
     
     public int[][] updateMatrix(int[][] matrix) {
         m = matrix.length;
@@ -26,10 +26,10 @@ class Solution {
             int i = cell[0];
             int j = cell[1];
             
-            for (int[] dir : directions) {
+            for (int k=0;k<4;k++) {
                 
-                int new_i = i + dir[0];
-                int new_j = j + dir[1];
+                int new_i = i + directions[0][k];
+                int new_j = j + directions[1][k];
                 
                 if(new_i >= 0 && new_i < m && new_j >= 0 && new_j < n && result[new_i][new_j] == -1) {
                     result[new_i][new_j] = result[i][j] + 1;
