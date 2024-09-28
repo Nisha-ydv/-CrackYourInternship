@@ -1,10 +1,10 @@
 class Solution {
-    int m, n;
+ 
     int[][] directions = {{-1, 0,1,0}, {0,1,0,-1}};
     
     public int[][] updateMatrix(int[][] matrix) {
-        m = matrix.length;
-        n = matrix[0].length;
+      int m = matrix.length;
+       int n = matrix[0].length;
         
         int[][] result = new int[m][n];
         
