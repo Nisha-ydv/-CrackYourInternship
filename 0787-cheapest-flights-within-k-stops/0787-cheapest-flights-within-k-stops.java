@@ -1,6 +1,6 @@
 class Solution {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-        int[] prev = new int[n];
+        int [] prev = new int[n];
         Arrays.fill(prev,Integer.MAX_VALUE);
         prev[src]=0;
         for(int i=0;i<=k;i++){
