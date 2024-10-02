@@ -4,7 +4,8 @@ class Solution {
     public int dijakstra(int n, ArrayList<ArrayList<ArrayList<Integer>>> adj,int src,int Threshold ){
         int dist[]=new int[n];
         for(int i=0;i<n;i++){
-            dist[i]=Integer.MAX_VALUE;
+            //dist[i]=Integer.MAX_VALUE;
+             dist[i]=Threshold+1;
         }
         dist[src]=0;
         PriorityQueue<int[]> pq=new PriorityQueue<>(new Comparator<int[]>(){
